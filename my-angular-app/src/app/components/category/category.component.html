@@ -1,0 +1,15 @@
+<div>
+    <h1>Category Master</h1>
+    <form (submit)="onSubmit()">
+      <input type="text" [(ngModel)]="categoryName" placeholder="Category Name" required />
+      <button type="submit">Add Category</button>
+    </form>
+    <ul>
+      <li *ngFor="let category of categories">
+        {{ category.name }}
+        <button (click)="editCategory(category)">Edit</button>
+        <button (click)="deleteCategory(category.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
